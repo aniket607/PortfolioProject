@@ -1,4 +1,4 @@
-# [Aniket Goyal's Portfolio](https://personal-portfolio-orpin-alpha.vercel.app/)
+# [Aniket Goyal's Portfolio](https://portfolio-psi-seven-74.vercel.app/)
 
 Welcome to the code repository for my personal portfolio website, built with Next.js! This project showcases my journey, projects, and skills in Development.
 
@@ -15,7 +15,7 @@ Welcome to the code repository for my personal portfolio website, built with Nex
 
 ## 🌐 Live Preview
 
-Check out the live website [here](https://personal-portfolio-orpin-alpha.vercel.app/).
+Check out the live website [here](https://portfolio-psi-seven-74.vercel.app/).
 
 ---
 
@@ -26,7 +26,7 @@ To run this project locally:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/aniket607/personal-portfolio.git
+   git clone https://github.com/aniket607/PortfolioProject
    cd portfolio
    ```
 
