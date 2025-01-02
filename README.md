@@ -1,4 +1,4 @@
-# [Aniket Goyal's Portfolio](https://portfolio-psi-seven-74.vercel.app/)
+# [Aniket Goyal's Portfolio](https://www.aniketgoyal.tech/)
 
 Welcome to the code repository for my personal portfolio website, built with Next.js! This project showcases my journey, projects, and skills in Development.
 
@@ -15,7 +15,7 @@ Welcome to the code repository for my personal portfolio website, built with Nex
 
 ## 🌐 Live Preview
 
-Check out the live website [here](https://portfolio-psi-seven-74.vercel.app/).
+Check out the live website [here](https://www.aniketgoyal.tech/).
 
 ---
 
