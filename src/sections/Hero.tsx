@@ -57,7 +57,9 @@ export const HeroSection = () => {
     <div className='flex items-center flex-col'>
       <Image src={avatar} alt="avatar" className="size-[100px]" />
       <div className='inline-flex bg-gray-950 border border-gray-800 px-4 py-1.5 items-center gap-4 rounded-lg'>
-        <div className='bg-green-500 size-2.5 rounded-full'></div>
+        <div className='bg-green-500 size-3 rounded-full relative'>
+          <div className='bg-green-500 size-3 rounded-full absolute animate-ping'></div>
+        </div>
         <div className='text-sm font-medium'>Actively Seeking Opportunities </div>
       </div>
     </div>  
