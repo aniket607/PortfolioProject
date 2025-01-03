@@ -26,7 +26,7 @@ export const Footer = () => {
             "radial-gradient(50% 50% at bottom center, black, transparent)",
         }}
         className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 -z-10"
-      ></div>
+      />
       <div className="container">
         <div className="border-t border-white/15 py-6 text-lg flex flex-col md:flex-row md:justify-between items-center gap-8">
           <div className="text-white/40">Made with Love💖</div>
