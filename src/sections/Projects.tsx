@@ -1,4 +1,4 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+import portfolioPage from "@/assets/images/portfolioPage.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
@@ -10,41 +10,32 @@ import { Card } from "@/components/Card";
 
 
 const portfolioProjects = [
+  
   {
-    year: "OCTOBER 2022",
-    title: "Dark Saas Landing Page",
+    year: "CURRENTLY WORKING ON",
+    title: "Coming Soon",
     githubLink: "",
     liveLink: "",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    image: darkSaasLandingPage,
-  },
-  {
-    year: "NOVEMBER 2021",
-    title: "Light Saas Landing Page",
-    githubLink: "",
-    liveLink: "",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Boosted X by Y%" },
+      { title: "Expanded customer reach by X%" },
     ],
     image: lightSaasLandingPage,
+    isOngoing: true,
+
   },
   {
-    year: "DECEMBER 2023",
-    title: "AI Startup Landing Page",
-    githubLink: "",
-    liveLink: "",
+    year: "January 2025",
+    title: "Portfolio Website",
+    githubLink: "https://github.com/aniket607/PortfolioProject",
+    liveLink: "https://www.aniketgoyal.tech/",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Developed fully SEO Optimised Site" },
+      { title: "Achieved Lighthouse Score of 100" },
+      { title: "Implemented Attractive Animations" },
     ],
-    image: aiStartupLandingPage,
+    image: portfolioPage,
+    isOngoing: false,
   },
 ];
 
@@ -79,8 +70,15 @@ export const ProjectsSection = () => {
 
             <div className="lg:grid lg:grid-cols-2 lg:gap-16 ">
               <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text ">
-                    <span>{project.year}</span>
+                <div className="flex items-center gap-2">
+                      {project.isOngoing && (
+                        <div className="bg-green-400 size-2.5 rounded-full relative">
+                          <div className="bg-green-400 absolute inset-0 rounded-full animate-ping-large"></div>
+                        </div>
+                      )}
+                      <span className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+                        {project.year}
+                      </span>
                 </div>
                 <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">{project.title}</h3>
                 <hr className="border-t-2 border-white/5 mt-4 md:mt-5" /> 
@@ -93,7 +91,8 @@ export const ProjectsSection = () => {
                   ))}
                 </ul>
                 <a href={project.liveLink}>
-                  <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                  <button className={`h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 
+                    ${project.isOngoing?"bg-gray-400 text-gray-600 cursor-not-allowed":"bg-white text-gray-950"}`}>
                     <span>Live Site</span>
                     <ArrowUpRight className="size-4" />
                   </button>
