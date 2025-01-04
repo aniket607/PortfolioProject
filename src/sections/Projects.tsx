@@ -6,6 +6,8 @@ import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import GithubIcon from "@/assets/icons/github.svg";
 import Image from "next/image";
+import { Card } from "@/components/Card";
+
 
 const portfolioProjects = [
   {
@@ -62,11 +64,14 @@ export const ProjectsSection = () => {
         See how I transformed concepts into engaging digital experience
       </p>
       <div className="flex flex-col mt-10 md:mt-20 gap-20">
-        {portfolioProjects.map((project) => (
-          <div key={project.title} 
-          className="bg-gray-800 rounded-3xl relative z-0 
-          overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 
-          after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none">
+        {portfolioProjects.map((project,projectIndex) => (
+         <Card
+         key={project.title}
+         className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+         style={{
+           top: `calc(64px + ${projectIndex * 37}px)`,
+         }}
+          >
             <div className="absolute inset-0 -z-10 opacity-5" 
             style={{
               backgroundImage:`url(${grainImage.src})`
@@ -107,7 +112,7 @@ export const ProjectsSection = () => {
                 className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"/>
               </div>
           </div>
-          </div>
+          </Card>
         ))}
       </div>
     </div>
