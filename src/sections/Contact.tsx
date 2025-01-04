@@ -10,7 +10,7 @@ export const ContactSection = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
-    navigator.clipboard.writeText("hiteshmahto786@gmail.com");
+    navigator.clipboard.writeText("aniketgoyal607@gmail.com");
     setIsClicked(true);
     setTimeout(() => setIsClicked(false), 500);
   };
