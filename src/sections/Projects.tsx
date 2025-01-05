@@ -1,6 +1,5 @@
 import portfolioPage from "@/assets/images/portfolioPage.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import nightlifePage from "@/assets/images/nightlife_mock.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
@@ -13,14 +12,14 @@ const portfolioProjects = [
   
   {
     year: "CURRENTLY WORKING ON",
-    title: "Coming Soon",
-    githubLink: "",
+    title: "NightLife",
+    githubLink: "https://github.com/aniket607/nightlife-app",
     liveLink: "",
     results: [
-      { title: "Boosted X by Y%" },
-      { title: "Expanded customer reach by X%" },
+      { title: "Building a project which can solve real world problem" },
+      { title: "Stay tuned for more updates and check git repo" },
     ],
-    image: lightSaasLandingPage,
+    image: nightlifePage,
     isOngoing: true,
 
   },
