@@ -1,5 +1,6 @@
 import portfolioPage from "@/assets/images/portfolioPage.png";
-import nightlifePage from "@/assets/images/nightlife_mock.png";
+import nightlifeUserPage from "@/assets/images/NightlifeUser.png";
+import nightlifeOrganizerPage from "@/assets/images/NightlifeOrg.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
@@ -12,15 +13,29 @@ const portfolioProjects = [
   
   {
     year: "CURRENTLY WORKING ON",
-    title: "NightLife",
-    githubLink: "https://github.com/aniket607/nightlife-app",
+    title: "NightLife - Event Platform",
+    githubLink: "https://github.com/aniket607/nightlife",
     liveLink: "",
     results: [
-      { title: "Building a project which can solve real world problem" },
-      { title: "Stay tuned for more updates and check git repo" },
+      { title: "Building a full-stack web application enabling users to discover and access nightlife events and club experiences" },
+      { title: "Optimized image loading speed by 40% through AWS S3 integration and caching" },
     ],
-    image: nightlifePage,
+    image: nightlifeUserPage,
     isOngoing: true,
+  },
+  {
+    year: "January 2025 - Present",
+    title: "NightLife - Organier Dashboard",
+    githubLink: "https://github.com/aniket607/nightlife-app",
+    liveLink: "https://nightlife.aniketgoyal.tech/",
+    results: [
+      { title: "Built secure event management platform with Auth.js, enabling nightclub organizers to manage events and guestlists" },
+      { title: "Designed real-time dashboard using Prisma ORM for efficient event and guest tracking" },
+      {title:  "Reduced operational costs by 70% through serverless architecture (NeonDB, AWS S3)"},
+      {title:  "Implemented Polling and Debouncing on Guestlists Page to display realtime guests"}
+    ],
+    image: nightlifeOrganizerPage,
+    isOngoing: false,
 
   },
   {
@@ -84,7 +99,7 @@ export const ProjectsSection = () => {
                 <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                   {project.results.map((result) => (
                     <li className="flex gap-2 text-sm md:text-base text-white/50" key={result.title}>
-                      <CheckCircleIcon className="size-6" />
+                      <CheckCircleIcon className="flex-shrink-0 size-5 mt-0.5" />
                       <span>{result.title}</span>
                     </li>
                   ))}
