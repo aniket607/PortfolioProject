@@ -12,16 +12,19 @@ import { Card } from "@/components/Card";
 const portfolioProjects = [
   
   {
-    year: "CURRENTLY WORKING ON",
+    year: "January 2025 - Present",
     title: "NightLife - Event Platform",
     githubLink: "https://github.com/aniket607/nightlife",
-    liveLink: "",
+    liveLink: "https://nightlifeapp.aniketgoyal.tech/",
     results: [
       { title: "Building a full-stack web application enabling users to discover and access nightlife events and club experiences" },
-      { title: "Optimized image loading speed by 40% through AWS S3 integration and caching" },
+      {title: "Implemented server-side rendering (SSR) for improved performance and SEO"},
+      {title: "Designed responsive UI with Tailwind CSS, ensuring seamless experience across all devices"},
+      {title: "Utilized Next.js 14 App Router and Server Actions for enhanced functionality and interactivity"},
     ],
     image: nightlifeUserPage,
     isOngoing: true,
+    showLiveLink: true,
   },
   {
     year: "January 2025 - Present",
@@ -35,8 +38,8 @@ const portfolioProjects = [
       {title:  "Implemented Polling and Debouncing on Guestlists Page to display realtime guests"}
     ],
     image: nightlifeOrganizerPage,
-    isOngoing: false,
-
+    isOngoing: true,
+    showLiveLink: true,
   },
   {
     year: "January 2025",
@@ -106,7 +109,8 @@ export const ProjectsSection = () => {
                 </ul>
                 <a href={project.liveLink}>
                   <button className={`h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 
-                    ${project.isOngoing?"bg-gray-400 text-gray-600 cursor-not-allowed":"bg-white text-gray-950"}`}>
+                    ${(project.isOngoing && !project.showLiveLink) ? "bg-gray-400 text-gray-600 cursor-not-allowed" : "bg-white text-gray-950"}`}
+                    disabled={project.isOngoing && !project.showLiveLink}>
                     <span>Live Site</span>
                     <ArrowUpRight className="size-4" />
                   </button>
